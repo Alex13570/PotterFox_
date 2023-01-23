@@ -23,7 +23,7 @@ public class UserInfoEntity extends BaseEntity{
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "icon_id", referencedColumnName = "mongoId")
-    private IconEntity iconId;
+    private IconInfoEntity iconId;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "details_id", referencedColumnName = "id")
