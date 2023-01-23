@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class IconInfoEntity extends BaseEntity{
+public class IconInfoEntity extends BaseEntity {
 
     @Column(unique = true, nullable = false)
     private String mongoId;

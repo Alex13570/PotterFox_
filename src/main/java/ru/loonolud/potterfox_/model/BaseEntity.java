@@ -9,23 +9,24 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.UUID;
 
 @Data
-@Entity
 @SuperBuilder
+@MappedSuperclass
 @NoArgsConstructor
 @AllArgsConstructor
 public class BaseEntity {
     @Id
-    @Column(nullable = false, name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(nullable = false, name = "id", unique = true)
+    @GeneratedValue(generator = "uuid")
+    private UUID id;
 
     @CreationTimestamp
-    private Instant createDate;
+    private Instant createdDate;
 
     @UpdateTimestamp
-    private Instant updateDate;
+    private Instant updatedDate;
 
 
 }
