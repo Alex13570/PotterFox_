@@ -24,6 +24,6 @@ public class ProductEntity extends BaseEntity{
 
     @OneToMany
     @JoinColumn(referencedColumnName = "mongoId")
-    private Set<IconEntity> icons;
+    private Set<IconInfoEntity> icons;
 
 }

@@ -1,31 +1,29 @@
 package ru.loonolud.potterfox_.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import org.bson.types.Binary;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class IconEntity extends BaseEntity{
+@Document(collection = "files")
+public class IconEntity {
 
-    @Column(unique = true, nullable = false)
-    private String mongoId;
+    @Id
+    private String id;
 
-    private String mimeType;
+    private Long size;
 
     private String fileName;
 
-    @ManyToOne
-    @JoinColumn(name="userEmail", nullable=false,referencedColumnName = "email")
-    private UserDetailsEntity userEmail;
+    private String mimeType;
 
-    private Long size;
+    private Binary content;
 
 }
