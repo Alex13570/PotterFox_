@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductEntity extends BaseEntity{
+public class ProductEntity extends BaseEntity {
 
     @Column(nullable = false)
     private String title;
@@ -19,11 +19,11 @@ public class ProductEntity extends BaseEntity{
     @Column(columnDefinition = "TEXT")
     private Character[] description;
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "decimal(10,2)", nullable = false)
     private Double price;
 
     @OneToMany
-    @JoinColumn(referencedColumnName = "mongoId")
+    @JoinColumn
     private Set<IconInfoEntity> icons;
 
 }

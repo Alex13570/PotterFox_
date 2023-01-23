@@ -18,12 +18,6 @@ public class IconEntity {
     @Id
     private String id;
 
-    private Long size;
-
-    private String fileName;
-
-    private String mimeType;
-
     private Binary content;
 
 }

@@ -23,7 +23,7 @@ public class UserDetailsEntity extends BaseEntity{
     private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "info_id", referencedColumnName = "id")
+    @JoinColumn(name = "userInfoId", referencedColumnName = "Id")
     private UserInfoEntity userInfo;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)

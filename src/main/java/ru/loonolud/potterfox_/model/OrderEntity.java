@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.Set;
@@ -16,9 +17,11 @@ import java.util.Set;
 public class OrderEntity extends BaseEntity{
 
     @ManyToOne
+    @JoinColumn
     private UserInfoEntity user;
 
     @OneToMany
+    @JoinColumn
     private Set<OrderDetailEntity> orderDetails;
 
     private String address;

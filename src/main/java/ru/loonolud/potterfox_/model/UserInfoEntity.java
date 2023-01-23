@@ -22,11 +22,11 @@ public class UserInfoEntity extends BaseEntity{
     private String address;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "icon_id", referencedColumnName = "mongoId")
+    @JoinColumn(name = "icon_id")
     private IconInfoEntity iconId;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "details_id", referencedColumnName = "id")
-    private UserDetailsEntity detailsId;
+    @JoinColumn(name = "userDetailsId", referencedColumnName = "Id")
+    private UserDetailsEntity userDetails;
 
 }
