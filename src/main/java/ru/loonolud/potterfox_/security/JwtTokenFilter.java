@@ -24,7 +24,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
     private static final String[] PERMIT_ALL = {
             "/api/auth",
-            "/swagger-ui",
+            "/swagger-ui.html",
             "/v3/api-docs"
     };
 

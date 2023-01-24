@@ -3,12 +3,14 @@ package ru.loonolud.potterfox_.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import ru.loonolud.potterfox_.api.Role;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDetailsEntity extends BaseEntity{

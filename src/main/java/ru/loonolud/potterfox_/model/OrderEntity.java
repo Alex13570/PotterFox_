@@ -3,6 +3,7 @@ package ru.loonolud.potterfox_.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -12,6 +13,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderEntity extends BaseEntity{
