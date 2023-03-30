@@ -6,4 +6,7 @@ import ru.loonolud.potterfox.model.IconInfoEntity;
 import java.util.UUID;
 
 public interface IconInfoRepository extends JpaRepository<IconInfoEntity, UUID> {
+
+    IconInfoEntity findByMongoId(String mongoId);
+
 }
